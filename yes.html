@@ -7,13 +7,7 @@
 
     <link rel="stylesheet" href="./style.css" />
 
-    <!-- ✅ EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("XMyMtdCMEoyqrYZk3"); // ✅ PUBLIC KEY
-      })();
-    </script>
+   
   </head>
 
   <body>
@@ -37,32 +31,10 @@
 
       <script async src="https://tenor.com/embed.js"></script>
 
-      <h1>Hehehehe, I knew it! 😄</h1>
+      <h1>Hehehehe, I knew it Litti! 😄</h1>
 
-      <!-- ✅ YES BUTTON -->
-      <button class="yes-btn" onclick="sendYes()">YES ❤️</button>
-    </div>
+      
 
-    <!-- ✅ Email send logic -->
-    <script>
-      function sendYes() {
-        emailjs
-          .send(
-            "service_oiub09i", // 🔁 replace this
-            "template_5jwmkwk",
-            {
-              message: "She clicked YES 😍",
-              time: new Date().toLocaleString(),
-            }
-          )
-          .then(() => {
-            alert("Message sent 😄");
-          })
-          .catch((err) => {
-            console.error(err);
-            alert("Something went wrong");
-          });
-      }
-    </script>
+  
   </body>
 </html>
