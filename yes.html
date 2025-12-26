@@ -6,39 +6,63 @@
     <title>Ask Her Out</title>
 
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- ✅ EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("XMyMtdCMEoyqrYZk3"); // ✅ PUBLIC KEY
+      })();
+    </script>
   </head>
+
   <body>
     <div class="container">
-      <!-- <div
+      <div
         class="tenor-gif-embed"
-        data-postid="253027946666209433"
+        data-postid="7643738292438706"
         data-share-method="host"
-        data-aspect-ratio="1.37853"
+        data-aspect-ratio="1.01852"
         data-width="100%"
       >
         <a
-          href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433"
-          >Mochi Cat GIF</a
-        >from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
-      </div> -->
-      <div
-       class="tenor-gif-embed" 
-       data-postid="7643738292438706" 
-       data-share-method="host" 
-       data-aspect-ratio="1.01852" 
-       data-width="100%"
-       ><a
-        href="https://tenor.com/view/%E3%82%82%E3%81%A1%E3%81%AD%E3%81%93-%E3%81%94%E3%81%BE%E3%81%B4%E3%83%BC%E3%81%A1-mochi-gif-7643738292438706">もちねこ ごまぴーち Sticker</a>from 
-        <a href="https://tenor.com/search/%E3%82%82%E3%81%A1%E3%81%AD%E3%81%93-stickers">もちねこ Stickers</a></div>
-         <script type="text/javascript"
-          async 
-          src="https://tenor.com/embed.js"></script>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
-      <h1>Hehehehe, I knew it! </h1>
+          href="https://tenor.com/view/%E3%82%82%E3%81%A1%E3%81%AD%E3%81%93-%E3%81%94%E3%81%BE%E3%81%B4%E3%83%BC%E3%81%A1-mochi-gif-7643738292438706"
+          >もちねこ ごまぴーち Sticker</a
+        >
+        from
+        <a href="https://tenor.com/search/%E3%82%82%E3%81%A1%E3%81%AD%E3%81%93-stickers"
+          >もちねこ Stickers</a
+        >
+      </div>
+
+      <script async src="https://tenor.com/embed.js"></script>
+
+      <h1>Hehehehe, I knew it! 😄</h1>
+
+      <!-- ✅ YES BUTTON -->
+      <button class="yes-btn" onclick="sendYes()">YES ❤️</button>
     </div>
+
+    <!-- ✅ Email send logic -->
+    <script>
+      function sendYes() {
+        emailjs
+          .send(
+            "service_oiub09i", // 🔁 replace this
+            "template_5jwmkwk",
+            {
+              message: "She clicked YES 😍",
+              time: new Date().toLocaleString(),
+            }
+          )
+          .then(() => {
+            alert("Message sent 😄");
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("Something went wrong");
+          });
+      }
+    </script>
   </body>
 </html>

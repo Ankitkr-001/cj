@@ -6,7 +6,16 @@
     <title>Ask Her Out game</title>
 
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- ✅ EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("XMyMtdCMEoyqrYZk3"); // public key
+      })();
+    </script>
   </head>
+
   <body>
     <div class="container">
       <div
@@ -16,22 +25,46 @@
         data-aspect-ratio="1.04918"
         data-width="100%"
       >
-        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
-        >from
+        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>
+        from
         <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
       </div>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
-      <h1>BGMI khelo gi Litti🤗</h1>
+
+      <script async src="https://tenor.com/embed.js"></script>
+
+      <h1>BGMI khelo gi Litti 🤗</h1>
       <p>~Think.. think...</p>
 
       <div class="btn">
-        <a href="yes.html">Yes</a>
+        <!-- ✅ YES -->
+       <a href="#" onclick="sendYes(); return false;">Yes</a>
+
+
+        <!-- ❌ NO stays same -->
         <a href="no1.html">No</a>
       </div>
     </div>
+
+    <!-- ✅ Email + redirect logic -->
+    <script>
+      function sendYes() {
+        emailjs
+          .send(
+            "service_oiub09i", // 🔁 replace this
+            "template_5jwmkwk",
+            {
+              message: "She clicked YES 😍",
+              time: new Date().toLocaleString(),
+            }
+          )
+          .then(() => {
+            alert("Message sent 😄");
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("Something went wrong");
+          });
+      }
+    </script>
   </body>
 </html>
