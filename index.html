@@ -32,12 +32,12 @@
 
       <script async src="https://tenor.com/embed.js"></script>
 
-      <h1>BGMI khelo gi Litti(Roshni Ji) 🤗</h1>
+      <h1>Will u be mine Cutieee(Diya Ji) 🤗</h1>
       <p>~Think.. think...</p>
 
       <div class="btn">
         <!-- ✅ YES -->
-       <a href="#" onclick="sendYes(); return false;">Yes</a>
+       <a href="yes.html" onclick="sendYes(); return false;">Yes</a>
 
 
         <!-- ❌ NO stays same -->
@@ -59,10 +59,12 @@
           )
           .then(() => {
             alert("Message sent 😄");
+            window.location.href = "yes.html";
           })
           .catch((err) => {
             console.error(err);
             alert("Something went wrong");
+            window.location.href = "yes.html";
           });
       }
     </script>
